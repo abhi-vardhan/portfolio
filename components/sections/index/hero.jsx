@@ -65,11 +65,11 @@ export default function Hero() {
 				</section>
 				<section>
 					<button	className={`button ${button.primary}`}
-							onClick={ () => window.location = 'mailto:hello@andrewnelson.net' } >
+							onClick={ ()=> window.open("https://drive.google.com/file/d/1oH-e-gb3xOixQLk32r8f_PkxocBj_6De/view?usp=sharing", "_blank") } >
 						{content.buttons.primary.title}
 					</button>
 					<button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://www.linkedin.com/in/--andrewnelson/", "_blank") } >
+							onClick={ ()=> window.open("https://www.linkedin.com/in/d-abhinav-vardhan-b9516a226/", "_blank") } >
 						{content.buttons.secondary.title}
 					</button>
 				</section>
@@ -78,3 +78,4 @@ export default function Hero() {
 		</Section>
 	)
 }
+

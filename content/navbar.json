@@ -4,12 +4,8 @@
 		"title": "About Me"
 	},
 	{
-		"url": "/case-studies",
-		"title": "Case Studies"
-	},
-	{
 		"url": "/articles",
-		"title": "Articles"
+		"title": "Tech Stack"
 	},
 	{
 		"url": "/projects",
