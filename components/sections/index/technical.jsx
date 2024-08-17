@@ -43,7 +43,7 @@ export default function Technical() {
 						/>
 						<BadgesBlock 
 							title="Software I love to work with" 
-							copy="With over 20 years of experience creating digital assets, I have a deep and intuitive understanding of how the interfaces of the best software products in the world are designed. This is just some of the software I have used over that time."
+							copy="With a strong foundation in software development and extensive experience in building diverse digital solutions, I have developed a deep and intuitive understanding of how top-tier software interfaces are designed. Here's a glimpse of the tools and technologies I have mastered over time."
 							list={software}
 							block="software" 
 							fullContainer="fullContainer"
@@ -80,12 +80,9 @@ const software = [
 	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
 	{ key: 'firebase', 		name: 'Firebase', 			type: 'devicon' },
 	{ key: 'gear', 		name: 'RestAPI', 			type: 'fas' },
-	{ key: 'mailbox', 		name: 'Postman', 			type: 'fas' },
-	{ key: 'illustrator', 	name: 'Illustrator', 		type: 'devicon' },
 	{ key: 'vercel', 	name: 'Vercel', 		type: 'devicon' },
 	{ key: 'pycharm', 	name: 'PyCharm', 		type: 'devicon' },
 	{ key: 'figma', 		name: 'Figma', 				type: 'devicon' },
-	{ key: 'computer-mouse',name: 'Click Up', 			type: 'fas' },
 	{ key: 'tv', 		name: 'PowerBI', 				type: 'fas' },
 	{ key: 'docker', 	name: 'Docker', 		type: 'devicon' },
 	
@@ -99,20 +96,16 @@ const tech	= [
 	{ key: 'java', 	name: 'Java', 		type: 'devicon' },
 	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
 	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
-	{ key: 'react', 		name: 'React', 				type: 'devicon' },
+	{ key: 'react', 		name: 'ReactJS', 				type: 'devicon' },
 	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
 	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
 	{ key: 'github', 			name: 'GitHub', 				type: 'devicon' },
-	{ key: 'jquery', 		name: 'jQuery', 			type: 'devicon' },
 	{ key: 'firebase', 	name: 'Firebase', 		type: 'devicon' },
 	{ key: 'jetpackcompose', 	name: 'Jetpack Compose', 		type: 'devicon' },
-	{ key: 'postgresql', 	name: 'Postgresql', 		type: 'devicon' },
 	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
-	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
 	{ key: 'react', 	name: 'React Native', 		type: 'devicon' },
 	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
 	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
-	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
 	{ key: 'linux', 	name: 'Unix/Linux', 		type: 'devicon' },
 	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
 	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },

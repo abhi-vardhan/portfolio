@@ -30,7 +30,7 @@ export default function About() {
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="With a diverse skill set that includes Full stack development, application development, operational architecture, systems design, data analyst and public speaking, I am a well-rounded digital professional."
+					subTitle="With a diverse skill set that includes Full stack development, application development, operational architecture, systems design, data analyst and public speaking, I am a all-rounded digital professional."
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
@@ -52,7 +52,7 @@ export default function About() {
 							fullContainer="fullContainer"
 							block="methods" 
 							icon="fingerprint"
-							copy="One of my favorite aspects of development is architecting the entire project.  I enjoy the challenge of blending technical strategy with design thinking to create cohesive, impactful solutions."
+							copy="One of my favorite aspects of development is architecting an entire project. I enjoy the challenge of merging technical strategy with design thinking to craft cohesive and impactful solutions that bring ideas to life."
 							//invertedColor="invertedColor"
 							headerIcon={`${about.icon}`}
 						/>
