@@ -26,7 +26,7 @@
 	},
 	{
 		"project": "ALF Movies",
-		"url": "https://github.com/abhi-vardhan/portfolio.git",
+		"url": "https://alf-movies.vercel.app/",
 		"repo": "Public",
 		"descriptionTitle": "An full stack OTT platform.",
 		"description": "built on MERN stack with supabase. A modern web app with API integration for a seamless user interface.",
