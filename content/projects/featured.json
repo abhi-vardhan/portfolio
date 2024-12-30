@@ -1,23 +1,71 @@
 [
 	{
+		"project": "College Companion",
+		"url": "https://github.com/abhi-vardhan/CollegeCompanion2.0",
+		"repo": "Public",
+		"descriptionTitle": "Android Application for Students ",
+		"description": "to streamline college experience with user-friendly features",
+		"imageOptions": [
+		],
+		"images": [
+			{ "key": "mock-stack",	"hover": "right", 	"h": "600", "w": "456", "url": "/img/c1.png" },
+			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
+			{ "key": "mock-stack",	"hover": "left",	"h": "800", "w": "456", "url": "/img/c4.png" }
+		],
+		"stack": [
+			{ "key": "kotlin",		"name": "Kotlin", 		"type": "devicon" },
+			{ "key": "androidstudio",		"name": "Jetpack Compose", 		"type": "devicon" },
+			{ "key": "firebase", 	"name": "Firebase", 	"type": "devicon" },
+			{ "key": "github",			"name": "GitHub", 	"type": "devicon" },
+			{ "key": "java",		"name": "Java", 		"type": "devicon" },
+			{ "key": "html5", 		"name": "XML", 		"type": "devicon" },
+			{ "key": "git", "name": "API", 	"type": "devicon" },
+			{ "key": "android", "name": "Android", 	"type": "devicon" },
+			{ "key": "androidstudio",		"name": "Android Studio", 		"type": "devicon" }
+		]
+	},
+	{
+		"project": "ALF Movies",
+		"url": "https://github.com/abhi-vardhan/portfolio.git",
+		"repo": "Public",
+		"descriptionTitle": "An full stack OTT platform.",
+		"description": "built on MERN stack with supabase. A modern web app with API integration for a seamless user interface.",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "1197", "w": "1806",  "url": "/img/alfmov4.png" },
+			{ "key": "mock-stack",	"hover": "right",	"h": "1197", "w": "1806", "url": "/img/alfmov5.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "supabase",		"name": "Supabase", 		"type": "devicon" },
+			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
+		]
+	},
+	{
 		"project": "Open OS",
-		"url": "https://github.com/abhi-vardhan/Open-OS.git",
+		"url": "https://open-os.vercel.app/profile",
 		"repo": "Public",
 		"descriptionTitle": "Chrome Extension for Developers",
 		"description": "to keep a track of issues and PR's in Github at their home Page",
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "600", "w": "456", "url": "/img/msc-mock_stack/f1.gif" }
+			{ "key": "mock-stack",	"hover": "right", 	"h": "1000", "w": "1456", "url": "/img/openos1.png" }
 		],
 		"stack": [
 			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "jquery", 		"name": "jQuery", 		"type": "devicon" },
 			{ "key": "git", "name": "API", 	"type": "devicon" },
 			{ "key": "nodejs", "name": "NodeJS", 	"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
 			{ "key": "github",			"name": "GitHub", 	"type": "devicon" },
 			{ "key": "vercel",		"name": "Vercel", 		"type": "devicon" },
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" }
@@ -45,31 +93,6 @@
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
 			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "College Companion",
-		"url": "https://github.com/abhi-vardhan/CollegeCompanion2.0",
-		"repo": "Public",
-		"descriptionTitle": "Android Application for Students ",
-		"description": "to streamline college experience with user-friendly features",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "600", "w": "456", "url": "/img/c1.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "800", "w": "456", "url": "/img/c4.png" }
-		],
-		"stack": [
-			{ "key": "kotlin",		"name": "Kotlin", 		"type": "devicon" },
-			{ "key": "androidstudio",		"name": "Jetpack Compose", 		"type": "devicon" },
-			{ "key": "firebase", 	"name": "Firebase", 	"type": "devicon" },
-			{ "key": "github",			"name": "GitHub", 	"type": "devicon" },
-			{ "key": "java",		"name": "Java", 		"type": "devicon" },
-			{ "key": "html5", 		"name": "XML", 		"type": "devicon" },
-			{ "key": "git", "name": "API", 	"type": "devicon" },
-			{ "key": "android", "name": "Android", 	"type": "devicon" },
-			{ "key": "androidstudio",		"name": "Android Studio", 		"type": "devicon" }
 		]
 	}
 ]
