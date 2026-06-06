@@ -1,167 +1,178 @@
-import { useEffect, useState } from 'react'
-import { useCallback } from 'react'
-import {useRouter} from 'next/router';
-import Link from 'next/link'
-import ThemeMode from '../utils/theme.util'
+import { useEffect, useState } from "react";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import ThemeMode from "../utils/theme.util";
 
-import settings from '../../content/_settings.json'
-import content  from '../../content/navbar.json'
-import css from '../../styles/structure/navbar.module.scss'
+import settings from "../../content/_settings.json";
+import content from "../../content/navbar.json";
+import css from "../../styles/structure/navbar.module.scss";
 
 export default function Navbar() {
+  const router = useRouter();
 
-	const router = useRouter()
+  const [menuState, menuToggle] = useState(false);
 
-	const [ menuState, menuToggle ] = useState()
+  useEffect(() => {
+    class RouteEvents {
+      constructor() {
+        console.log(
+          "%c☰  Navigation Router Events Loaded",
+          "background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; ",
+        );
+        this.addEventListeners();
+      }
 
-	useEffect( () => {
-		menuToggle(false)
-	}, [] )
+      closeMenu() {
+        menuToggle(false);
+      }
 
-	useEffect( () => {
-		class RouteEvents {
+      addEventListeners() {
+        router.events.on("routeChangeComplete", this.closeMenu);
+      }
 
-			constructor() {
-				console.log(
-					'%c☰  Navigation Router Events Loaded', 
-					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
-				)
-				this.addEventListeners()
-			}
+      removeEventListeners() {
+        router.events.off("routeChangeComplete", this.closeMenu);
+      }
+    }
 
-			closeMenu() {
-				menuToggle(false)
-			}
+    const routeEvents = new RouteEvents();
 
-			addEventListeners() {
-				router.events.on('routeChangeComplete', this.closeMenu)
-			}
+    return () => {
+      routeEvents.removeEventListeners();
+    };
+  }, [router.events]);
 
-			removeEventListeners() {
-				router.events.off('routeChangeComplete', this.closeMenu)
-			}
-		}
+  useEffect(() => {
+    class ScrollEvents {
+      constructor() {
+        console.log(
+          "%c▼  Navigation Scroll Events Loaded",
+          "background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; ",
+        );
 
-		const routeEvents = new RouteEvents
+        window.sticky = {};
+        window.sticky.nav = document.querySelector(`nav`);
 
-		return () => {
-			routeEvents.removeEventListeners()
-		}
-	}, [router.events] )
+        this.addEventListeners();
+      }
 
-	useEffect( () => {
+      addEventListeners() {
+        if (window.sticky.nav) {
+          window.addEventListener("DOMContentLoaded", this.maybeHideNav, false);
+          document.addEventListener("scroll", this.maybeHideNav, false);
+        }
+      }
 
-		class ScrollEvents {
+      removeEventListeners() {
+        if (window.sticky.nav) {
+          window.removeEventListener(
+            "DOMContentLoaded",
+            this.maybeHideNav,
+            false,
+          );
+          document.removeEventListener("scroll", this.maybeHideNav, false);
+        }
+      }
 
-			constructor() {
-				console.log(
-					'%c▼  Navigation Scroll Events Loaded', 
-					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
-				)
+      getPosition(e = null, top = true) {
+        let offset;
 
-				window.sticky		= {}
-				window.sticky.nav	= document.querySelector(`nav`)
+        if (!e) return;
 
-				this.addEventListeners()
-			}
+        if (top) {
+          offset =
+            e.getBoundingClientRect().top +
+            document.documentElement.scrollTop -
+            window.sticky.nav.at;
+          return offset;
+        } else {
+          offset =
+            e.getBoundingClientRect().bottom +
+            document.documentElement.scrollTop -
+            window.sticky.nav.at;
+          return offset;
+        }
+      }
 
-			addEventListeners() {
-				if ( window.sticky.nav ) {
-					window.addEventListener('DOMContentLoaded', this.maybeHideNav, false)
-					document.addEventListener('scroll', this.maybeHideNav, false)
-				}
-			}
+      maybeHideNav() {
+        /**
+         * If scrolling down, else if scrolling up
+         *
+         * Add or remove hidden class from filter menu
+         */
+        const nC = window.sticky.nav.classList;
+        // const hero 		= document.querySelector('main > div:first-of-type')
+        // const hiddenAt 	= ( hero ) ? hero.getBoundingClientRect().bottom + window.scrollY : ( window.innerHeight / 2 )
+        const hiddenAt = window.innerHeight / 2;
 
-			removeEventListeners() {
-				if ( window.sticky.nav ) {
-					window.removeEventListener('DOMContentLoaded', this.maybeHideNav, false)
-					document.removeEventListener('scroll', this.maybeHideNav, false)
-				}
-			}
+        if (
+          window.scrollY > this.lastY &&
+          window.scrollY > hiddenAt &&
+          !nC.contains(css.hidden)
+        ) {
+          nC.add(css.hidden);
+        } else if (window.scrollY < this.lastY && nC.contains(css.hidden)) {
+          nC.remove(css.hidden);
+        }
 
-			getPosition( e = null, top = true ) {
-				let offset
+        /**
+         * At end of every scroll event update the previous position
+         */
+        this.lastY = window.scrollY;
+      }
+    }
 
-				if ( !e ) return
+    const scrollEvents = new ScrollEvents();
 
-				if ( top ) {
-					offset = e.getBoundingClientRect().top + document.documentElement.scrollTop - window.sticky.nav.at
-					return offset
-				} else {
-					offset = e.getBoundingClientRect().bottom + document.documentElement.scrollTop - window.sticky.nav.at
-					return offset
-				}	
-			}
+    return () => {
+      scrollEvents.removeEventListeners();
+    };
+  }, []);
 
-			maybeHideNav() {
+  const toggleMenu = () => {
+    let bool = !menuState;
+    menuToggle(bool);
+  };
 
-				/**
-				 * If scrolling down, else if scrolling up
-				 * 
-				 * Add or remove hidden class from filter menu
-				 */
-				const nC 		= window.sticky.nav.classList
-				// const hero 		= document.querySelector('main > div:first-of-type')
-				// const hiddenAt 	= ( hero ) ? hero.getBoundingClientRect().bottom + window.scrollY : ( window.innerHeight / 2 )
-				const hiddenAt	= ( window.innerHeight / 2 )
-
-				if ( window.scrollY > this.lastY && window.scrollY > hiddenAt && ! nC.contains( css.hidden ) ) {
-					nC.add( css.hidden )
-				} else if ( window.scrollY < this.lastY && nC.contains( css.hidden ) ) {
-					nC.remove( css.hidden )
-				}
-
-				/**
-				 * At end of every scroll event update the previous position
-				 */
-				this.lastY = window.scrollY
-			}
-		}
-
-		const scrollEvents = new ScrollEvents
-
-		return () => {
-			scrollEvents.removeEventListeners()
-		}
-	}, [] )
-
-	const toggleMenu = () => {
-		let bool = ! menuState
-		menuToggle(bool)
-	}
-
-	return (
-		<nav id="Navbar" className={css.container}>
-			<ul className={css.menu}>
-				<li className={css.menuHeader}>
-					<Link className={css.logo} href="/"  >
-						{settings.name}
-					</Link>
-					<button onClick={toggleMenu} className={css.mobileToggle} data-open={menuState}>
-						<div>
-							<span></span>
-							<span></span>
-						</div>
-					</button>
-				</li>
-				<li data-open={menuState} className={css.menuContent}>
-					<ul>
-						{
-						content.map( ({ url, title }, index) => {
-							return (
-								<li key={index}>
-									<Link href={url}>{title}</Link>
-								</li>
-							)
-						})	
-						}
-						<li>
-							<ThemeMode />
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<span onClick={toggleMenu} className={css.menuBlackout} data-open={menuState}></span>
-		</nav>
-	)
+  return (
+    <nav id="Navbar" className={css.container}>
+      <ul className={css.menu}>
+        <li className={css.menuHeader}>
+          <Link className={css.logo} href="/">
+            {settings.name}
+          </Link>
+          <button
+            onClick={toggleMenu}
+            className={css.mobileToggle}
+            data-open={menuState}
+          >
+            <div>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </li>
+        <li data-open={menuState} className={css.menuContent}>
+          <ul>
+            {content.map(({ url, title }, index) => {
+              return (
+                <li key={index}>
+                  <Link href={url}>{title}</Link>
+                </li>
+              );
+            })}
+            <li>
+              <ThemeMode />
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <span
+        onClick={toggleMenu}
+        className={css.menuBlackout}
+        data-open={menuState}
+      ></span>
+    </nav>
+  );
 }

@@ -56,17 +56,13 @@ export default function FeaturedProject({ content }, index) {
       >
         <div className={css.details}>
           <div className={css.projectHeader}>
-            <div className={css.header}>
-              <h3 className="highlight">{project}</h3>
-              <span className={css.privateOr}>
-                <i className="devicon-github-plain"></i>
-                {repo}
-              </span>
-            </div>
+            <div className={css.appIcon}>{project.charAt(0)}</div>
+            <h3 className={css.projectTitle}>
+              {project} <span className={css.titleDash}>—</span>{" "}
+              {descriptionTitle}
+            </h3>
             <div className={css.description}>
-              <p>
-                <strong>{descriptionTitle}</strong> {description}
-              </p>
+              <p>{description}</p>
             </div>
             <div className={css.stackContainer}>
               <Badges
@@ -77,10 +73,9 @@ export default function FeaturedProject({ content }, index) {
               />
             </div>
             <m.div variants={""} className={css.viewProject}>
-              <Icon icon={["fad", "arrow-right-to-bracket"]} />
-              <a href={url}></a>
+              <span>View Project</span>
+              <Icon icon={["fas", "arrow-right"]} />
             </m.div>
-            <a href={url}></a>
           </div>
         </div>
 

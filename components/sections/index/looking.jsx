@@ -26,18 +26,22 @@ export default function Looking() {
         classProp={`${section.title} ${looking.container}`}
         spacing={["verticalXXXLrg"]}
       >
-        <h4>I&apos;m currently looking for employment.</h4>
-        <h2 className={looking.json}> &#123;</h2>
+        <h4>I&apos;m currently open to new opportunities.</h4>
+        <h2 className={looking.json}>&#123;</h2>
         <h2 className={looking.jsonSub}>
-          <span className={looking.highlight}>Full Stack Developer</span>,
+          <span className={looking.highlight}>Backend Engineer</span>,
         </h2>
         <h2 className={looking.jsonSub}>
-          <span className={looking.highlight2}>Application Developer</span>
+          <span className={looking.highlight2}>Cloud Architect</span>,
+        </h2>
+        <h2 className={looking.jsonSub}>
+          <span className={looking.highlight}>Full-Stack Developer</span>
         </h2>
         <h2 className={looking.json}>&#125;</h2>
         <h4>
-          I am particularily interested in development postions where I can help
-          make an organization wide impact and develop softwares.
+          I&apos;m seeking roles where I can architect robust APIs, streamline
+          deployments, and build scalable platforms that drive high-impact
+          products.
         </h4>
         {/* <h2>Senior <span className={looking.highlight}>User Experience</span> Designer</h2> */}
         {/* <p className="subtitle">with a focus on Product Design.</p> */}

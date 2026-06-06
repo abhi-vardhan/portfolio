@@ -1,98 +1,76 @@
 [
-	{
-		"project": "College Companion",
-		"url": "https://github.com/abhi-vardhan/CollegeCompanion2.0",
-		"repo": "Public",
-		"descriptionTitle": "Android Application for Students ",
-		"description": "to streamline college experience with user-friendly features",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "600", "w": "456", "url": "/img/c1.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1200", "w": "556", "url": "/img/msc-mock_stack/02.png" },
-			{ "key": "mock-stack",	"hover": "left",	"h": "800", "w": "456", "url": "/img/c4.png" }
-		],
-		"stack": [
-			{ "key": "kotlin",		"name": "Kotlin", 		"type": "devicon" },
-			{ "key": "androidstudio",		"name": "Jetpack Compose", 		"type": "devicon" },
-			{ "key": "firebase", 	"name": "Firebase", 	"type": "devicon" },
-			{ "key": "github",			"name": "GitHub", 	"type": "devicon" },
-			{ "key": "java",		"name": "Java", 		"type": "devicon" },
-			{ "key": "html5", 		"name": "XML", 		"type": "devicon" },
-			{ "key": "git", "name": "API", 	"type": "devicon" },
-			{ "key": "android", "name": "Android", 	"type": "devicon" },
-			{ "key": "androidstudio",		"name": "Android Studio", 		"type": "devicon" }
-		]
-	},
-	{
-		"project": "ALF Movies",
-		"url": "https://alf-movies.vercel.app/",
-		"repo": "Public",
-		"descriptionTitle": "An full stack OTT platform.",
-		"description": "built on MERN stack with supabase. A modern web app with API integration for a seamless user interface.",
-		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
-		],
-		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "1197", "w": "1806",  "url": "/img/alfmov4.png" },
-			{ "key": "mock-stack",	"hover": "right",	"h": "1197", "w": "1806", "url": "/img/alfmov5.png" }
-		],
-		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "supabase",		"name": "Supabase", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	},
-	{
-		"project": "Open OS",
-		"url": "https://open-os.vercel.app/profile",
-		"repo": "Public",
-		"descriptionTitle": "Chrome Extension for Developers",
-		"description": "to keep a track of issues and PR's in Github at their home Page",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "1000", "w": "1456", "url": "/img/openos1.png" }
-		],
-		"stack": [
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "git", "name": "API", 	"type": "devicon" },
-			{ "key": "nodejs", "name": "NodeJS", 	"type": "devicon" },
-			{ "key": "github",			"name": "GitHub", 	"type": "devicon" },
-			{ "key": "vercel",		"name": "Vercel", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" }
-		]
-	},
-	{
-		"project": "Portfolio Website",
-		"url": "https://github.com/abhi-vardhan/portfolio.git",
-		"repo": "Public",
-		"descriptionTitle": "An open source portfolio",
-		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
-		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
-		],
-		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "1297", "w": "1006",  "url": "/img/p5.png" }
-		],
-		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
-		]
-	}
+  {
+    "project": "AutoETH",
+    "url": "https://github.com/abhi-vardhan/autoeth",
+    "repo": "Public",
+    "descriptionTitle": "Let Blockchain build itself",
+    "description": " What if blockchain could be mined by Intelligence?..",
+    "imageOptions": [],
+    "images": [],
+    "stack": [
+      { "key": "python", "name": "Python", "type": "devicon" },
+      { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+      { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+      { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+      { "key": "solidity", "name": "Solidity", "type": "devicon" },
+      { "key": "nodejs", "name": "WebSockets", "type": "devicon" },
+      { "key": "github", "name": "Web3.py", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "Cymatic",
+    "url": "https://github.com/abhi-vardhan/cymatic",
+    "repo": "Public",
+    "descriptionTitle": "Multi-Agent Backend Platform",
+    "description": "ETHGlobal: Open Agents 2025 — Python/FastAPI backend with cleanly separated agent layers (voice processing, identity, orchestration, execution). Smart contracts in Solidity tested with Foundry; caller-linked identity layer maps phone numbers to on-chain state.",
+    "imageOptions": [],
+    "images": [],
+    "stack": [
+      { "key": "python", "name": "Python", "type": "devicon" },
+      { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+      { "key": "solidity", "name": "Solidity", "type": "devicon" },
+      { "key": "git", "name": "Foundry", "type": "devicon" },
+      { "key": "github", "name": "REST APIs", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "AI Buddy",
+    "url": "https://github.com/abhi-vardhan/ai-buddy",
+    "repo": "Public",
+    "descriptionTitle": "Personalised Learning Platform",
+    "description": "Study platform used by 100+ students — PDF uploads processed through an NLP pipeline to generate personalised explanations, quizzes, and flashcards via Gemini API. Adaptive quiz engine adjusts difficulty from performance history.",
+    "imageOptions": [],
+    "images": [],
+    "stack": [
+      { "key": "react", "name": "React.js", "type": "devicon" },
+      { "key": "nodejs", "name": "Node.js", "type": "devicon" },
+      { "key": "mongodb", "name": "MongoDB", "type": "devicon" },
+      { "key": "python", "name": "LangChain", "type": "devicon" },
+      { "key": "tailwindcss", "name": "Tailwind", "type": "devicon" }
+    ]
+  },
+  {
+    "project": "Open OS",
+    "url": "https://open-os.vercel.app/profile",
+    "repo": "Public",
+    "descriptionTitle": "Chrome Extension for Developers",
+    "description": "to keep track of GitHub issues and PRs directly from the new tab page. Built with vanilla JS and the GitHub REST API.",
+    "imageOptions": [],
+    "images": [
+      {
+        "key": "mock-stack",
+        "hover": "right",
+        "h": "1000",
+        "w": "1456",
+        "url": "/img/openos1.png"
+      }
+    ],
+    "stack": [
+      { "key": "javascript", "name": "JavaScript", "type": "devicon" },
+      { "key": "html5", "name": "HTML5", "type": "devicon" },
+      { "key": "css3", "name": "CSS3", "type": "devicon" },
+      { "key": "nodejs", "name": "Node.js", "type": "devicon" },
+      { "key": "github", "name": "GitHub API", "type": "devicon" }
+    ]
+  }
 ]

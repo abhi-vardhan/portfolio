@@ -1,32 +1,32 @@
 {
-	"intro": {
-		"start": "const Abhinav = ( name, passion ) =>",
-		"end": "Hello, my name is",
-		"speed": 60,
-		"deletionSpeed": 80,
-		"wrapper": "h2",
-		"startDelay": 1000,
-		"deleteDelay": 3000,
-		"restartDelay": 12000
-	},
+  "intro": {
+    "start": "const Abhinav = ( name, passion ) =>",
+    "end": "Hello, my name is",
+    "speed": 60,
+    "deletionSpeed": 80,
+    "wrapper": "h2",
+    "startDelay": 1000,
+    "deleteDelay": 3000,
+    "restartDelay": 12000
+  },
 
-	"header": {
-		"name": "Abhinav Vardhan.",
-		"usp": "I design and build softwares with impact "
-	},
+  "header": {
+    "name": "Abhinav Vardhan.",
+    "usp": "Backend & Cloud Engineer."
+  },
 
-	"paragraph": "Driven by a passion for coding and continuous learning, I strive to create software that not only solves problems but also sets new standards.",
+  "paragraph": "I design and build scalable backend systems, cloud-native infrastructure, and developer tools. I've built production platforms serving thousands of users, engineered Dockerized microservices, and developed award-winning projects at ETHGlobal.",
 
-	"buttons": {
-		"primary": {
-			"title": "Resume",
-			"url": "",
-			"leaveSite": false
-		},
-		"secondary": {
-			"title": "LinkedIn",
-			"url": "",
-			"leaveSite": "true"
-		}
-	}
+  "buttons": {
+    "primary": {
+      "title": "Resume",
+      "url": "",
+      "leaveSite": false
+    },
+    "secondary": {
+      "title": "LinkedIn",
+      "url": "",
+      "leaveSite": "true"
+    }
+  }
 }
