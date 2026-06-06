@@ -1,81 +1,113 @@
-// Core packages
-import Image from "next/image";
-
 // Section structure
 import Section from "../../structure/section";
 import Container from "../../structure/container";
 
 // Section general blocks
 import SectionTitle from "../../blocks/section.title.block";
-import SectionGridBg from "../../blocks/section.grid.block";
-
-// Section specific blocks
-import BadgesBlock from "../../blocks/about.badges.block";
-import CopyBlock from "../../blocks/about.copy.block";
 
 // Section scss
-import about from "../../../styles/sections/index/about.module.scss";
+import css from "../../../styles/sections/index/technical.module.scss";
 
-/**
- * Section: Technical
- * Highlight your technical skills with a short blurb about you,
- * Then display the programs you are proficient with and the technologies you use if applicable.
- *
- * @returns {jsx} <Technical />
- */
 export default function Technical() {
   return (
-    <Section classProp={`${about.section} borderBottom`}>
+    <Section classProp={`${css.section} borderBottom`}>
       <Container spacing={["verticalXXXLrg"]}>
         <SectionTitle
           title="Technical"
           preTitle="Hardskills"
           subTitle="Backend-first engineer with a strong command of cloud infrastructure, distributed systems, and full-stack development."
         />
-        <section className={`${about.content} ${about.container}`}>
-          <div className={about.copy}>
-            <CopyBlock
-              title="Built for the backend, ready for the cloud"
-              icon={["fat", "chart-network"]}
-              copy="I specialise in building reliable, scalable backend systems and cloud-native infrastructure. From REST APIs and WebSockets to Docker microservices and CI/CD pipelines — I care deeply about performance, reliability, and clean architecture."
-              iconClass={about.icon}
-              containerClass={about.container}
-            />
-            <BadgesBlock
-              title="Tools & platforms"
-              copy="The platforms and tools I rely on daily — from containerisation and CI/CD to cloud services and API tooling."
-              list={software}
-              block="software"
-              fullContainer="fullContainer"
-              icon="grid-2-plus"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-            <BadgesBlock
-              title="Languages & frameworks"
-              copy="Languages and frameworks I use to build production-grade backend APIs, full-stack applications, and smart contracts."
-              list={tech}
-              block="tech"
-              fullContainer="fullContainer"
-              icon="laptop-code"
-              containerClass={about.container}
-              headerIcon={about.icon}
-            />
-          </div>
-          <div className={`${about.image} ${about.technicalSvg}`}>
-            <Image
-              src="/img/dataism-24.svg"
-              width={477}
-              height={1111}
-              alt="Data Strings 01 by Colorpong: https://ywft.us/2177b695b"
-            />
-          </div>
-        </section>
+
+        <div className={css.grid}>
+          {categories.map(({ label, icon, items }) => (
+            <div key={label} className={css.card}>
+              <div className={css.cardHeader}>
+                <span className={css.cardIcon}>{icon}</span>
+                <h3>{label}</h3>
+              </div>
+              <ul className={css.skillList}>
+                {items.map((item) => (
+                  <li key={item.name} className={css.skill}>
+                    <i className={`${item.icon} colored`} />
+                    <span>{item.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </Container>
-      {/* <SectionGridBg gridSize={4}/> */}
     </Section>
   );
 }
+
+const categories = [
+  {
+    label: "Languages",
+    icon: "⌨️",
+    items: [
+      { name: "TypeScript", icon: "devicon-typescript-plain" },
+      { name: "JavaScript", icon: "devicon-javascript-plain" },
+      { name: "Python", icon: "devicon-python-plain" },
+      { name: "Java", icon: "devicon-java-plain" },
+      { name: "Solidity", icon: "devicon-solidity-plain" },
+    ],
+  },
+  {
+    label: "Backend",
+    icon: "🖥️",
+    items: [
+      { name: "Node.js", icon: "devicon-nodejs-plain" },
+      { name: "FastAPI", icon: "devicon-fastapi-plain" },
+      { name: "REST APIs", icon: "devicon-fastapi-plain" },
+      { name: "WebSockets", icon: "devicon-nodejs-plain" },
+      { name: "Prisma", icon: "devicon-prisma-original" },
+    ],
+  },
+  {
+    label: "Frontend",
+    icon: "🎨",
+    items: [
+      { name: "React.js", icon: "devicon-react-original" },
+      { name: "Next.js", icon: "devicon-nextjs-original" },
+      { name: "React Native", icon: "devicon-react-original" },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-plain" },
+      { name: "HTML / CSS", icon: "devicon-html5-plain" },
+    ],
+  },
+  {
+    label: "Databases",
+    icon: "🗄️",
+    items: [
+      { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+      { name: "MongoDB", icon: "devicon-mongodb-plain" },
+      { name: "Redis", icon: "devicon-redis-plain" },
+      { name: "MySQL", icon: "devicon-mysql-plain" },
+    ],
+  },
+  {
+    label: "Cloud & DevOps",
+    icon: "☁️",
+    items: [
+      { name: "AWS", icon: "devicon-amazonwebservices-plain" },
+      { name: "Docker", icon: "devicon-docker-plain" },
+      { name: "GitHub Actions", icon: "devicon-githubactions-plain" },
+      { name: "Nginx", icon: "devicon-nginx-plain" },
+      { name: "Linux", icon: "devicon-linux-plain" },
+    ],
+  },
+  {
+    label: "Tools",
+    icon: "🔧",
+    items: [
+      { name: "Git", icon: "devicon-git-plain" },
+      { name: "GitHub", icon: "devicon-github-original" },
+      { name: "Postman", icon: "devicon-postman-plain" },
+      { name: "Figma", icon: "devicon-figma-plain" },
+      { name: "VS Code", icon: "devicon-vscode-plain" },
+    ],
+  },
+];
 
 const software = [
   { key: "docker", name: "Docker", type: "devicon" },

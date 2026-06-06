@@ -1,14 +1,14 @@
 [
-	{
-		"url": "/",
-		"title": "About Me"
-	},
-	{
-		"url": "/articles",
-		"title": "Tech Stack"
-	},
-	{
-		"url": "/projects",
-		"title": "Projects"
-	}
+  {
+    "url": "/",
+    "title": "About Me"
+  },
+  {
+    "url": "/tech-stack",
+    "title": "Tech Stack"
+  },
+  {
+    "url": "/projects",
+    "title": "Projects"
+  }
 ]
