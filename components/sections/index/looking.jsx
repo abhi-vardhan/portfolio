@@ -26,19 +26,23 @@ export default function Looking() {
         classProp={`${section.title} ${looking.container}`}
         spacing={["verticalXXXLrg"]}
       >
-        <h4>I&apos;m currently open to new opportunities.</h4>
-        <h2 className={looking.json}>&#123;</h2>
-        <h2 className={looking.jsonSub}>
+        <h4 data-reveal>I&apos;m currently open to new opportunities.</h4>
+        <h2 className={looking.json} data-reveal data-reveal-delay="1">
+          &#123;
+        </h2>
+        <h2 className={looking.jsonSub} data-reveal data-reveal-delay="1">
           <span className={looking.highlight}>Backend Engineer</span>,
         </h2>
-        <h2 className={looking.jsonSub}>
+        <h2 className={looking.jsonSub} data-reveal data-reveal-delay="2">
           <span className={looking.highlight2}>Cloud Architect</span>,
         </h2>
-        <h2 className={looking.jsonSub}>
+        <h2 className={looking.jsonSub} data-reveal data-reveal-delay="3">
           <span className={looking.highlight}>Full-Stack Developer</span>
         </h2>
-        <h2 className={looking.json}>&#125;</h2>
-        <h4>
+        <h2 className={looking.json} data-reveal data-reveal-delay="3">
+          &#125;
+        </h2>
+        <h4 data-reveal data-reveal-delay="4">
           I&apos;m seeking roles where I can architect robust APIs, streamline
           deployments, and build scalable platforms that drive high-impact
           products.

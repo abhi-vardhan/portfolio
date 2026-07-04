@@ -122,7 +122,7 @@ Instead write something measurable.
 
 Example:
 
-> Software Engineer focused on backend systems, cloud infrastructure, and developer tools. Built production applications serving 2,000+ users, designed Dockerized microservices, automated CI/CD pipelines, and developed award-winning projects at ETHGlobal hackathons.
+> Software Engineer focused on backend systems, cloud infrastructure, and developer tools. Built production applications serving 2,000+ users, designed Dockerized microservices, automated CI/CD pipelines, and built projects at ETHGlobal hackathons.
 
 That instantly sounds stronger.
 

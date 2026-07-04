@@ -156,9 +156,19 @@ export default function Navbar() {
         <li data-open={menuState} className={css.menuContent}>
           <ul>
             {content.map(({ url, title }, index) => {
+              const isActive =
+                url === "/"
+                  ? router.asPath === "/"
+                  : router.asPath.startsWith(url);
               return (
                 <li key={index}>
-                  <Link href={url}>{title}</Link>
+                  <Link
+                    href={url}
+                    className={isActive ? css.active : undefined}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {title}
+                  </Link>
                 </li>
               );
             })}

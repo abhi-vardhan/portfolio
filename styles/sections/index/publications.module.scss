@@ -1,0 +1,168 @@
+@import "../../scss/mixins";
+
+.section {
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .card {
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: var(--background-dim2);
+    border: 1px solid var(--primary-dark);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    @include transition;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        600px circle at 0% 0%,
+        color-mix(in srgb, var(--secondary) 10%, transparent),
+        transparent 60%
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    &:hover {
+      border-color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  .icon {
+    flex: 0 0 auto;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    color: #06121a;
+    background: linear-gradient(
+      135deg,
+      var(--neon-2-1),
+      var(--secondary-bright)
+    );
+    box-shadow: 0 8px 24px color-mix(in srgb, var(--secondary) 30%, transparent);
+
+    svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    min-width: 0;
+  }
+
+  .metaRow {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .badge {
+    font-family: var(--font-accent);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 99rem;
+    border: 1px solid color-mix(in srgb, var(--secondary) 40%, transparent);
+    background: color-mix(in srgb, var(--secondary) 10%, transparent);
+  }
+
+  .type,
+  .role {
+    font-family: var(--font-accent);
+    font-size: 0.78rem;
+    color: var(--primary-dim);
+
+    &::before {
+      content: "·";
+      margin-right: 0.6rem;
+      color: var(--primary-dark);
+    }
+  }
+
+  .title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-bright);
+    line-height: 1.25;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--primary-dim);
+    max-width: 60ch;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--primary-dark);
+  }
+
+  .isbn {
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    color: var(--primary-dim);
+    letter-spacing: 0.02em;
+
+    strong {
+      color: var(--primary);
+      font-weight: 700;
+      margin-left: 0.35rem;
+    }
+  }
+
+  .view {
+    font-family: var(--font-accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+    @include transition;
+  }
+
+  .card:hover .view {
+    color: var(--primary-bright);
+  }
+}
+
+@include media($max: $mobile) {
+  .section {
+    .card {
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 1.5rem;
+    }
+  }
+}

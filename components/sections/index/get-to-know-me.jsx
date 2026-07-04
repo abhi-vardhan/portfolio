@@ -6,20 +6,26 @@ export default function GetToKnowMe() {
   return (
     <section className={css.section}>
       <div className={css.inner}>
-        <h2 className={css.heading}>Get to know me</h2>
+        <h2 className={css.heading} data-reveal>
+          Get to know me
+        </h2>
 
         <div className={css.grid}>
           {/* About me */}
           <Link href="/#about">
-            <div className={`${css.card} ${css.cardAbout}`}>
+            <div
+              className={`${css.card} ${css.cardAbout}`}
+              data-reveal
+              data-reveal-delay="1"
+            >
               <div className={css.cardText}>
                 <span className={css.cardTitle}>About me</span>
                 <span className={css.cardSub}>Who I am and what I do</span>
               </div>
               <div className={css.cardMedia}>
                 <img
-                  src="/img/memoji.png"
-                  alt="Abhinav memoji"
+                  src="/img/profile.jpg"
+                  alt="Abhinav Vardhan"
                   className={css.memoji}
                 />
               </div>
@@ -32,7 +38,11 @@ export default function GetToKnowMe() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className={`${css.card} ${css.cardOss}`}>
+            <div
+              className={`${css.card} ${css.cardOss}`}
+              data-reveal
+              data-reveal-delay="2"
+            >
               <div className={css.cardText}>
                 <span className={css.cardTitle}>Open Source</span>
                 <span className={css.cardSub}>
@@ -40,15 +50,10 @@ export default function GetToKnowMe() {
                 </span>
               </div>
               <div className={css.cardMedia}>
-                <div className={css.terminalBox}>
-                  <span className={css.terminalBar}>
-                    <span />
-                    <span />
-                    <span />
-                  </span>
-                  <pre className={css.terminalCode}>{`$ git push origin main
-✓ 3 commits ahead
-★ 12 repos public`}</pre>
+                <div className={css.emojiStack}>
+                  <span>🐙</span>
+                  <span>📦</span>
+                  <span>🔧</span>
                 </div>
               </div>
             </div>
@@ -56,7 +61,11 @@ export default function GetToKnowMe() {
 
           {/* Projects */}
           <Link href="/projects">
-            <div className={`${css.card} ${css.cardProjects}`}>
+            <div
+              className={`${css.card} ${css.cardProjects}`}
+              data-reveal
+              data-reveal-delay="3"
+            >
               <div className={css.cardText}>
                 <span className={css.cardTitle}>Projects</span>
                 <span className={css.cardSub}>
@@ -64,11 +73,40 @@ export default function GetToKnowMe() {
                 </span>
               </div>
               <div className={css.cardMedia}>
-                <div className={css.projectsList}>
-                  {["AutoETH", "Cymatic", "AI Buddy", "Open OS"].map((p) => (
-                    <span key={p} className={css.projectPill}>
-                      {p}
-                    </span>
+                <div className={css.projectsStack}>
+                  {[
+                    {
+                      name: "AutoETH",
+                      desc: "Let blockchain build itself",
+                      emoji: "⧠",
+                      grad: "linear-gradient(135deg,#7c3aed,#a78bfa)",
+                    },
+                    {
+                      name: "Cymatic",
+                      desc: "Voice-first on-chain identity",
+                      emoji: "🎙️",
+                      grad: "linear-gradient(135deg,#f59e0b,#fcd34d)",
+                    },
+                    {
+                      name: "AI Buddy",
+                      desc: "Personalised learning",
+                      emoji: "🤖",
+                      grad: "linear-gradient(135deg,#0ea5e9,#5f8cff)",
+                    },
+                  ].map(({ name, desc, emoji, grad }) => (
+                    <div key={name} className={css.projectRow}>
+                      <span
+                        className={css.projectIcon}
+                        style={{ background: grad }}
+                      >
+                        {emoji}
+                      </span>
+                      <span className={css.projectInfo}>
+                        <span className={css.projectName}>{name}</span>
+                        <span className={css.projectDesc}>{desc}</span>
+                      </span>
+                      <span className={css.projectArrow}>&#8594;</span>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -77,7 +115,11 @@ export default function GetToKnowMe() {
 
           {/* Tech Stack */}
           <Link href="/tech-stack">
-            <div className={`${css.card} ${css.cardTech}`}>
+            <div
+              className={`${css.card} ${css.cardTech}`}
+              data-reveal
+              data-reveal-delay="4"
+            >
               <div className={css.cardText}>
                 <span className={css.cardTitle}>Tech Stack</span>
                 <span className={css.cardSub}>
@@ -85,21 +127,23 @@ export default function GetToKnowMe() {
                 </span>
               </div>
               <div className={css.cardMedia}>
-                <div className={css.iconGrid}>
+                <div className={css.emojiIconGrid}>
                   {[
-                    { icon: "devicon-typescript-plain colored", bg: "#3178c6" },
-                    { icon: "devicon-react-original colored", bg: "#222" },
-                    { icon: "devicon-nodejs-plain colored", bg: "#215732" },
-                    { icon: "devicon-docker-plain colored", bg: "#0db7ed" },
-                    { icon: "devicon-python-plain colored", bg: "#1e3a5f" },
-                    { icon: "devicon-postgresql-plain colored", bg: "#336791" },
-                  ].map(({ icon, bg }, i) => (
-                    <span
-                      key={i}
-                      className={css.iconTile}
-                      style={{ background: bg }}
-                    >
-                      <i className={icon} />
+                    { e: "🟦", n: "TypeScript" },
+                    { e: "🟨", n: "JavaScript" },
+                    { e: "🐍", n: "Python" },
+                    { e: "☕", n: "Java" },
+                    { e: "⚛️", n: "React" },
+                    { e: "▲", n: "Next.js" },
+                    { e: "🟩", n: "Node.js" },
+                    { e: "⚡", n: "FastAPI" },
+                    { e: "🐘", n: "PostgreSQL" },
+                    { e: "🍃", n: "MongoDB" },
+                    { e: "🐳", n: "Docker" },
+                    { e: "☁️", n: "AWS" },
+                  ].map(({ e, n }) => (
+                    <span key={n} className={css.emojiBubble} title={n}>
+                      {e}
                     </span>
                   ))}
                 </div>

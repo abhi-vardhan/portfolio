@@ -1,44 +1,133 @@
 [
   {
     "project": "AutoETH",
-    "url": "https://github.com/abhi-vardhan/autoeth",
+    "slug": "autoeth",
+    "emoji": "⟠",
+    "url": "https://autoeth.live/",
     "repo": "Public",
-    "descriptionTitle": "Let Blockchain build itself",
-    "description": " What if blockchain could be mined by Intelligence?..",
+    "descriptionTitle": "Let blockchain build itself",
+    "tagline": "What if a blockchain could be mined by intelligence?",
+    "year": "2025",
+    "role": "Co-built · Backend & contracts",
+    "status": "Live",
+    "description": "The first decentralized network where AI agents compete to validate real-time oracle data — stake, predict, and earn through intelligent consensus.",
+    "overview": "AutoETH is a decentralized network where AI agents compete to validate real-time oracle data. It streams ETH/USD and BTC/USD feeds from Pyth Network and lets agents stake, predict and earn through a Proof-of-Intelligence consensus — a full protocol, not just a hackathon demo. Built together with Harsh Suthar.",
+    "highlights": [
+      { "value": "Pyth", "label": "Live oracle feeds" },
+      { "value": "AI agents", "label": "Proof of Intelligence" },
+      { "value": "Real-time", "label": "On-chain settlement" }
+    ],
+    "features": [
+      "AI agents compete to validate real-time oracle data for trustless consensus",
+      "Live ETH/USD & BTC/USD price feeds streamed from Pyth Network",
+      "Gamified leaderboard tracking reputation, accuracy and win counts",
+      "Instant settlement with immediate on-chain reputation updates",
+      "Solidity contracts on EVM with a Next.js + TypeScript dashboard and FastAPI backend"
+    ],
+    "links": {
+      "github": "https://github.com/10234567Z/AutoETH",
+      "live": "https://autoeth.live/",
+      "hideGithub": false
+    },
     "imageOptions": [],
-    "images": [],
+    "images": [
+      {
+        "key": "autoeth",
+        "hover": "right",
+        "h": "1280",
+        "w": "2880",
+        "url": "/img/autoeth-1.png"
+      }
+    ],
     "stack": [
-      { "key": "python", "name": "Python", "type": "devicon" },
-      { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
-      { "key": "nextjs", "name": "Next.js", "type": "devicon" },
-      { "key": "typescript", "name": "TypeScript", "type": "devicon" },
       { "key": "solidity", "name": "Solidity", "type": "devicon" },
-      { "key": "nodejs", "name": "WebSockets", "type": "devicon" },
-      { "key": "github", "name": "Web3.py", "type": "devicon" }
+      { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+      { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+      { "key": "hard-hat", "name": "Hardhat", "type": "fas" },
+      { "key": "satellite-dish", "name": "Pyth Network", "type": "fas" },
+      { "key": "python", "name": "Python", "type": "devicon" },
+      { "key": "fastapi", "name": "FastAPI", "type": "devicon" }
     ]
   },
   {
     "project": "Cymatic",
-    "url": "https://github.com/abhi-vardhan/cymatic",
+    "slug": "cymatic",
+    "emoji": "🎙️",
+    "url": "https://cymatic-three.vercel.app/",
     "repo": "Public",
-    "descriptionTitle": "Multi-Agent Backend Platform",
-    "description": "ETHGlobal: Open Agents 2025 — Python/FastAPI backend with cleanly separated agent layers (voice processing, identity, orchestration, execution). Smart contracts in Solidity tested with Foundry; caller-linked identity layer maps phone numbers to on-chain state.",
+    "descriptionTitle": "Voice-first iNFT infrastructure",
+    "tagline": "Phone calls become on-chain identity actions.",
+    "year": "2025",
+    "role": "Co-built · Backend",
+    "status": "Live · 0G Testnet",
+    "description": "Voice-first iNFT infrastructure — phone calls create and track caller-bound iNFT identities on 0G, then let an agent stack react in real time.",
+    "overview": "Cymatic turns phone calls into on-chain identity actions. It creates caller-bound iNFT identities from voice onboarding, connects the voice workflow to wallet and contract operations, and keeps the whole interaction fast, simple and agent-ready — running live on the 0G testnet. Built together with Harsh Suthar.",
+    "highlights": [
+      { "value": "Voice", "label": "Phone → chain" },
+      { "value": "iNFT", "label": "Caller identity" },
+      { "value": "0G", "label": "Testnet live" }
+    ],
+    "features": [
+      "Creates caller-bound iNFT identities from voice onboarding",
+      "Connects the voice workflow with wallet and contract operations",
+      "Multi-agent backend separating voice, identity, orchestration and execution",
+      "Solidity smart contracts tested with Foundry, deployed on the 0G testnet",
+      "Python / FastAPI orchestration exposed over clean REST APIs"
+    ],
+    "links": {
+      "github": "https://github.com/10234567Z/Cymatic",
+      "live": "https://cymatic-three.vercel.app/",
+      "hideGithub": false
+    },
     "imageOptions": [],
-    "images": [],
+    "images": [
+      {
+        "key": "cymatic",
+        "hover": "right",
+        "h": "1440",
+        "w": "2880",
+        "url": "/img/cymatic-1.png"
+      }
+    ],
     "stack": [
-      { "key": "python", "name": "Python", "type": "devicon" },
-      { "key": "fastapi", "name": "FastAPI", "type": "devicon" },
+      { "key": "phone", "name": "Voice", "type": "fas" },
       { "key": "solidity", "name": "Solidity", "type": "devicon" },
-      { "key": "git", "name": "Foundry", "type": "devicon" },
-      { "key": "github", "name": "REST APIs", "type": "devicon" }
+      { "key": "typescript", "name": "TypeScript", "type": "devicon" },
+      { "key": "nextjs", "name": "Next.js", "type": "devicon" },
+      { "key": "screwdriver-wrench", "name": "Foundry", "type": "fas" },
+      { "key": "python", "name": "Python", "type": "devicon" },
+      { "key": "fastapi", "name": "FastAPI", "type": "devicon" }
     ]
   },
   {
     "project": "AI Buddy",
+    "slug": "ai-buddy",
+    "emoji": "🤖",
     "url": "https://github.com/abhi-vardhan/ai-buddy",
     "repo": "Public",
     "descriptionTitle": "Personalised Learning Platform",
+    "tagline": "Turn any PDF into a personalised study companion.",
+    "year": "2024",
+    "role": "Full-stack Developer",
+    "status": "Live · 100+ users",
     "description": "Study platform used by 100+ students — PDF uploads processed through an NLP pipeline to generate personalised explanations, quizzes, and flashcards via Gemini API. Adaptive quiz engine adjusts difficulty from performance history.",
+    "overview": "AI Buddy is a personalised learning platform used by 100+ students. Upload a PDF and an NLP pipeline turns it into tailored explanations, quizzes and flashcards — with an adaptive engine that tunes difficulty to each learner's performance over time.",
+    "highlights": [
+      { "value": "100+", "label": "Students" },
+      { "value": "Adaptive", "label": "Quiz engine" },
+      { "value": "Gemini", "label": "NLP pipeline" }
+    ],
+    "features": [
+      "PDF ingestion through a structured NLP pipeline",
+      "Personalised explanations, quizzes & flashcards via the Gemini API",
+      "Adaptive quiz engine that adjusts difficulty from history",
+      "React + Node.js + MongoDB application stack"
+    ],
+    "links": {
+      "github": "https://github.com/abhi-vardhan/ai-buddy",
+      "live": "",
+      "hideGithub": false
+    },
     "imageOptions": [],
     "images": [],
     "stack": [
@@ -51,10 +140,32 @@
   },
   {
     "project": "Open OS",
+    "slug": "open-os",
+    "emoji": "🧩",
     "url": "https://open-os.vercel.app/profile",
     "repo": "Public",
     "descriptionTitle": "Chrome Extension for Developers",
+    "tagline": "Your GitHub work, one glance away on every new tab.",
+    "year": "2024",
+    "role": "Creator",
+    "status": "Live",
     "description": "to keep track of GitHub issues and PRs directly from the new tab page. Built with vanilla JS and the GitHub REST API.",
+    "overview": "Open OS is a Chrome extension that brings your GitHub issues and pull requests straight to the new-tab page, so your open work is always one glance away. It's built with vanilla JavaScript and the GitHub REST API for a fast, framework-free experience.",
+    "highlights": [
+      { "value": "New tab", "label": "Dashboard" },
+      { "value": "Vanilla JS", "label": "Zero deps" },
+      { "value": "GitHub API", "label": "Live data" }
+    ],
+    "features": [
+      "New-tab dashboard surfacing GitHub issues & PRs",
+      "GitHub REST API integration for live data",
+      "Lightweight vanilla JS with no framework overhead"
+    ],
+    "links": {
+      "github": "",
+      "live": "https://open-os.vercel.app/profile",
+      "hideGithub": true
+    },
     "imageOptions": [],
     "images": [
       {

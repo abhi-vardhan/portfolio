@@ -4,12 +4,124 @@
 .section {
   border-bottom: 1px solid var(--primary-dark);
 
-  max-height: 1440px;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
+  padding: 7rem 0 4rem;
   justify-content: center;
 
   > .container {
     height: fit-content;
+    position: relative;
+    z-index: 2;
+  }
+
+  // ── Animated aurora field ──────────────────────────────
+  .aurora {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+
+    span {
+      position: absolute;
+      display: block;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+      mix-blend-mode: screen;
+      will-change: transform;
+    }
+
+    .blob1,
+    .blob2,
+    .blob3 {
+    }
+  }
+
+  .blob1 {
+    width: 46vw;
+    height: 46vw;
+    top: -12%;
+    left: -8%;
+    background: radial-gradient(
+      circle at 30% 30%,
+      var(--neon-1-1),
+      transparent 65%
+    );
+    animation: fxAurora 26s ease-in-out infinite;
+  }
+
+  .blob2 {
+    width: 40vw;
+    height: 40vw;
+    top: 8%;
+    right: -10%;
+    background: radial-gradient(
+      circle at 60% 40%,
+      var(--neon-2-2),
+      transparent 65%
+    );
+    animation: fxAurora 32s ease-in-out infinite reverse;
+  }
+
+  .blob3 {
+    width: 38vw;
+    height: 38vw;
+    bottom: -16%;
+    left: 28%;
+    background: radial-gradient(
+      circle at 50% 50%,
+      var(--secondary),
+      transparent 62%
+    );
+    animation: fxAurora 38s ease-in-out infinite;
+  }
+
+  .gridLines {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in srgb, var(--primary-dim2) 45%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--primary-dim2) 45%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 45%,
+      #000 0%,
+      transparent 78%
+    );
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 45%,
+      #000 0%,
+      transparent 78%
+    );
+    opacity: 0.5;
+  }
+
+  // ── Pre-header row + status dot ────────────────────────
+  .preHeaderRow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 4rem;
+  }
+
+  .statusDot {
+    flex: 0 0 auto;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--secondary);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--secondary) 70%, transparent);
+    animation: heroPulse 2.4s ease-out infinite;
   }
 
   .preHeader {
@@ -17,21 +129,38 @@
     font-family: var(--font-accent);
     font-size: 1.2rem;
     font-weight: 400;
-    margin: 1rem 0;
-    margin-top: 4rem;
-    margin-bottom: 0.25rem;
+    margin: 0;
   }
 
   .header {
     color: var(--primary-bright);
     font-family: var(--font-sans);
-    font-size: 5rem;
+    font-size: 3.75rem;
     margin: 0;
   }
 
+  // ── Gradient shimmer on the name ───────────────────────
+  .nameShimmer {
+    background: linear-gradient(
+      100deg,
+      var(--primary-bright) 0%,
+      var(--primary-bright) 35%,
+      var(--secondary) 50%,
+      var(--secondary-bright) 60%,
+      var(--primary-bright) 75%,
+      var(--primary-bright) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: fxShimmer 7s linear infinite;
+  }
+
   .bigUsp {
-    font-size: clamp(3.5rem, 8.5vw, 9rem);
-    line-height: 1;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    line-height: 1.05;
     margin-top: 0.25rem;
   }
 
@@ -41,6 +170,85 @@
 
   .primaryBright {
     color: var(--primary);
+  }
+
+  // ── Actions + stats ────────────────────────────────────
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0;
+    align-items: center;
+  }
+
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 2.75rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--primary-dark);
+    list-style: none;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .statValue {
+    font-family: var(--font-accent);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-bright);
+    letter-spacing: -0.02em;
+  }
+
+  .statLabel {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-dim);
+  }
+
+  // ── Scroll cue ─────────────────────────────────────────
+  .scrollCue {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    z-index: 2;
+  }
+
+  .scrollText {
+    font-family: var(--font-accent);
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--primary-dim);
+  }
+
+  .scrollLine {
+    width: 1px;
+    height: 42px;
+    background: linear-gradient(var(--secondary), transparent);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      background: var(--secondary);
+      animation: heroScrollLine 2s ease-in-out infinite;
+    }
   }
 
   .tempBright {
@@ -65,6 +273,9 @@
     .preHeader {
       font-size: 1rem;
     }
+    .preHeaderRow {
+      margin-top: 3rem;
+    }
     .header {
       font-size: 2.9rem;
     }
@@ -80,6 +291,46 @@
       font-size: 0.875rem;
       padding: 0.75rem 2rem;
     }
+    .stats {
+      gap: 1.25rem 2rem;
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+    }
+    .statValue {
+      font-size: 1.1rem;
+    }
+    .blob1,
+    .blob2,
+    .blob3 {
+      width: 80vw;
+      height: 80vw;
+      filter: blur(60px);
+    }
+    .scrollCue {
+      display: none;
+    }
+  }
+}
+
+// ── Hero keyframes (module-scoped) ───────────────────────
+@keyframes heroPulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--secondary) 70%, transparent);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+@keyframes heroScrollLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(260%);
   }
 }
 

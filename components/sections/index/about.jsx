@@ -15,7 +15,7 @@ export default function About() {
   return (
     <Section classProp={`${about.section} borderBottom`}>
       <Container spacing={["verticalXXXLrg"]}>
-        <div className={about.headline}>
+        <div className={about.headline} data-reveal>
           <h2>A little bit about me</h2>
           <p className={about.headlineSub}>Who I am and what I do.</p>
         </div>
@@ -23,7 +23,7 @@ export default function About() {
         <section className={about.content}>
           {/* Left: text blocks */}
           <div className={about.copy}>
-            <div className={about.block}>
+            <div className={about.block} data-reveal data-reveal-delay="1">
               <span className={about.label}>WHO I AM</span>
               <p>
                 I&apos;m <strong>Abhinav Vardhan</strong>, a backend and cloud
@@ -33,7 +33,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className={about.block}>
+            <div className={about.block} data-reveal data-reveal-delay="2">
               <span className={about.label}>WHAT I DO</span>
               <p>
                 I specialise in backend systems, cloud-native infrastructure,
@@ -44,13 +44,13 @@ export default function About() {
               </p>
             </div>
 
-            <div className={about.block}>
+            <div className={about.block} data-reveal data-reveal-delay="3">
               <span className={about.label}>WHAT I&apos;VE BUILT</span>
               <p>
                 I&apos;ve shipped a production mobile platform serving 2,000+
                 active users at Pravachan, led a 400-person engineering club,
-                and built award-winning Web3 projects at ETHGlobal hackathons.
-                Every project is a chance to solve a hard problem well.
+                and built Web3 projects at ETHGlobal hackathons. Every project
+                is a chance to solve a hard problem well.
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export default function About() {
           </div>
 
           {/* Right: photo + CTA */}
-          <div className={about.sidebar}>
+          <div className={about.sidebar} data-reveal data-reveal-delay="2">
             <div className={about.image}>
               <img src="/img/profile_bg.jpg" alt="Abhinav Vardhan" />
             </div>

@@ -2,6 +2,7 @@ import Hero from "../components/sections/index/hero";
 import Looking from "../components/sections/index/looking";
 import About from "../components/sections/index/about";
 import Experience from "../components/sections/index/experience";
+import Publications from "../components/sections/index/publications";
 import GetToKnowMe from "../components/sections/index/get-to-know-me";
 import FeaturedProjects from "../components/sections/projects/featured";
 
@@ -19,6 +20,7 @@ export default function HomePage() {
       <FeaturedProjects />
       <About />
       <Experience />
+      <Publications />
       <GetToKnowMe />
     </>
   );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { useEffect } from "react";
 import { m, useAnimation } from "framer-motion";
@@ -13,10 +14,16 @@ import content from "../../../content/projects/featured.json";
 export default function FeaturedProject({ content }, index) {
   const {
     project,
+    slug,
+    emoji,
     url,
     repo,
     descriptionTitle,
     description,
+    tagline,
+    year,
+    role,
+    status,
     stack,
     imageOptions,
     images,
@@ -38,63 +45,60 @@ export default function FeaturedProject({ content }, index) {
   }, [controls, inView]);
 
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={css.projectLink}
-    >
-      <m.section
-        key={index}
-        className={css.project}
-        //framer-motion
-        ref={ref}
-        variants={container}
-        initial={["rest", "hidden"]}
-        whileHover="hover"
-        animate={controls}
-      >
-        <div className={css.details}>
-          <div className={css.projectHeader}>
-            <div className={css.appIcon}>{project.charAt(0)}</div>
-            <h3 className={css.projectTitle}>
-              {project} <span className={css.titleDash}>—</span>{" "}
-              {descriptionTitle}
-            </h3>
-            <div className={css.description}>
-              <p>{description}</p>
+    <Link href={`/projects/${slug}`}>
+      <a className={css.projectLink}>
+        <m.section
+          key={index}
+          className={css.project}
+          //framer-motion
+          ref={ref}
+          variants={container}
+          initial={["rest", "hidden"]}
+          whileHover="hover"
+          animate={controls}
+        >
+          <div className={css.details}>
+            <div className={css.projectHeader}>
+              <div className={css.appIcon}>{emoji || project.charAt(0)}</div>
+              <h3 className={css.projectTitle}>
+                {project} <span className={css.titleDash}>—</span>{" "}
+                {descriptionTitle}
+              </h3>
+              <div className={css.description}>
+                <p>{description}</p>
+              </div>
+              <div className={css.stackContainer}>
+                <Badges
+                  list={stack}
+                  block="stack"
+                  fullContainer={false}
+                  color={false}
+                />
+              </div>
+              <m.div variants={""} className={css.viewProject}>
+                <span>View details</span>
+                <Icon icon={["fas", "arrow-right"]} />
+              </m.div>
             </div>
-            <div className={css.stackContainer}>
-              <Badges
-                list={stack}
-                block="stack"
-                fullContainer={false}
-                color={false}
-              />
-            </div>
-            <m.div variants={""} className={css.viewProject}>
-              <span>View Project</span>
-              <Icon icon={["fas", "arrow-right"]} />
-            </m.div>
           </div>
-        </div>
 
-        <div className={css.imageContainer}>
-          <span className={`${css.imageAnimationContainer}`}>
-            {images.map(({ key, url, hover, h, w }, index) => {
-              hover = hover === "left" ? hoverLeft : hoverRight;
-              return (
-                <m.div key={`${index}-${key}`} variants={item}>
-                  <m.div variants={hover}>
-                    <Image src={url} alt="x" height={h} width={w} />
+          <div className={css.imageContainer}>
+            <span className={`${css.imageAnimationContainer}`}>
+              {images.map(({ key, url, hover, h, w }, index) => {
+                hover = hover === "left" ? hoverLeft : hoverRight;
+                return (
+                  <m.div key={`${index}-${key}`} variants={item}>
+                    <m.div variants={hover}>
+                      <Image src={url} alt="x" height={h} width={w} />
+                    </m.div>
                   </m.div>
-                </m.div>
-              );
-            })}
-          </span>
-        </div>
-      </m.section>
-    </a>
+                );
+              })}
+            </span>
+          </div>
+        </m.section>
+      </a>
+    </Link>
   );
 }
 

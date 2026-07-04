@@ -37,6 +37,33 @@
   flex-direction: column;
   gap: var(--size-3x);
 
+  .metaRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .statusPill {
+    font-family: var(--font-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 99rem;
+    border: 1px solid color-mix(in srgb, var(--secondary) 40%, transparent);
+    background: color-mix(in srgb, var(--secondary) 10%, transparent);
+    white-space: nowrap;
+  }
+
+  .metaYear {
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    color: var(--primary-dim);
+    margin-left: auto;
+  }
+
   .appIcon {
     width: 3.5rem;
     height: 3.5rem;
