@@ -19,10 +19,26 @@ const experiences = [
     description:
       "Built and scaled a cross-platform mobile platform end-to-end — from architecture to production deployment — serving a spiritual content platform delivering live and on-demand content across India.",
     bullets: [
-      <>Built a React Native + Node.js mobile app serving <strong>2,000+ active users</strong>, with a centralised admin dashboard maintaining <strong>99%+ uptime</strong> across Android and iOS.</>,
-      <>Reduced API response time by <strong>~35%</strong> by implementing Redis caching and connection pooling on high-traffic endpoints.</>,
-      <>Designed a <strong>Docker microservices architecture</strong> (auth, media, payments, notifications, analytics) with PostgreSQL, MongoDB and Redis; automated deployments via <strong>GitHub Actions CI/CD</strong>, cutting release time by over 80%.</>,
-      <>Built Razorpay subscription APIs covering the full payment lifecycle — create, renew, cancel and webhook failure recovery; integrated <strong>Cloudflare CDN</strong> for global content delivery.</>,
+      <>
+        Built a React Native + Node.js mobile app serving{" "}
+        <strong>2,000+ active users</strong>, with a centralised admin dashboard
+        maintaining <strong>99%+ uptime</strong> across Android and iOS.
+      </>,
+      <>
+        Reduced API response time by <strong>~35%</strong> by implementing Redis
+        caching and connection pooling on high-traffic endpoints.
+      </>,
+      <>
+        Designed a <strong>Docker microservices architecture</strong> (auth,
+        media, payments, notifications, analytics) with PostgreSQL, MongoDB and
+        Redis; automated deployments via <strong>GitHub Actions CI/CD</strong>,
+        cutting release time by over 80%.
+      </>,
+      <>
+        Built Razorpay subscription APIs covering the full payment lifecycle —
+        create, renew, cancel and webhook failure recovery; integrated{" "}
+        <strong>Cloudflare CDN</strong> for global content delivery.
+      </>,
     ],
     tech: [
       { icon: "devicon-react-original colored", label: "React Native" },
@@ -120,7 +136,7 @@ function TimelineEntry({ entry, index }) {
 
         <ul className={css.bullets}>
           {entry.bullets.map((b, i) => (
-            <li key={i}>{b}</li>
+            <li key={i}><span>{b}</span></li>
           ))}
         </ul>
 

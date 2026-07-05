@@ -1,0 +1,32 @@
+[
+  {
+    "name": "AutoETH",
+    "event": "ETHIndia 2024",
+    "eventUrl": "https://ethindia.co",
+    "organiser": "ETHGlobal",
+    "date": "Dec 2024",
+    "location": "Bangalore, India",
+    "tagline": "AI agents that compete to validate real-time oracle data.",
+    "result": "Finalist",
+    "links": {
+      "project": "https://autoeth.live/",
+      "github": "https://github.com/10234567Z/AutoETH"
+    },
+    "stack": ["Solidity", "Next.js", "FastAPI", "Pyth Network", "Hardhat"]
+  },
+  {
+    "name": "Cymatic",
+    "event": "ETHGlobal: Open Agents 2025",
+    "eventUrl": "https://ethglobal.com/events/agents",
+    "organiser": "ETHGlobal",
+    "date": "2025",
+    "location": "Online",
+    "tagline": "Phone calls become on-chain identity actions via voice-first iNFT infra.",
+    "result": "Submitted",
+    "links": {
+      "project": "https://cymatic-three.vercel.app/",
+      "github": "https://github.com/10234567Z/Cymatic"
+    },
+    "stack": ["Solidity", "TypeScript", "FastAPI", "Foundry", "0G Network"]
+  }
+]

@@ -1,15 +1,16 @@
 {
-	"name": "Abhinav Vardhan",
-	"logo": "",
-	
-	"username": {
-		"github": "abhi-vardhan",
-		"linkedin": "d-abhinav-vardhan"
-	},
+  "name": "Abhinav Vardhan",
+  "logo": "",
+  "email": "abhinavvardhan22@gmail.com",
 
-	"portfolio": { 
-		"forkthis": "Steal this theme! Its open-source 🥰",
-		"repo_html": "https://github.com/abhi-vardhan/portfolio.git",
-		"repo_api": "https://github.com/abhi-vardhan/portfolio.git"
-	}
+  "username": {
+    "github": "abhi-vardhan",
+    "linkedin": "d-abhinav-vardhan"
+  },
+
+  "portfolio": {
+    "forkthis": "Steal this theme! Its open-source 🥰",
+    "repo_html": "https://github.com/abhi-vardhan/portfolio.git",
+    "repo_api": "https://github.com/abhi-vardhan/portfolio.git"
+  }
 }

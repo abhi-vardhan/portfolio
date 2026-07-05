@@ -1,0 +1,247 @@
+@import "../../scss/_mixins";
+
+/* ── Timeline layout ──────────────────────────────────────── */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0 1.25rem;
+  position: relative;
+
+  /* vertical connecting line */
+  &:not(:last-child) .track::after {
+    content: "";
+    position: absolute;
+    top: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    bottom: 0;
+    background: color-mix(in srgb, var(--primary-dim2) 35%, transparent);
+  }
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 0.25rem;
+}
+
+.dot {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--primary-dim2);
+  border: 2px solid var(--background);
+  outline: 2px solid var(--primary-dim2);
+  z-index: 1;
+
+  &.result_finalist {
+    background: #f5c518;
+    outline-color: #f5c51855;
+  }
+  &.result_winner {
+    background: #4ade80;
+    outline-color: #4ade8055;
+  }
+  &.result_submitted {
+    background: var(--secondary);
+    outline-color: color-mix(in srgb, var(--secondary) 30%, transparent);
+  }
+}
+
+/* ── Card content ─────────────────────────────────────────── */
+.content {
+  background: color-mix(in srgb, var(--background-dim) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary-dark) 80%, transparent);
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    border-color: color-mix(in srgb, var(--secondary) 30%, transparent);
+    background: color-mix(in srgb, var(--background-dim) 80%, transparent);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+
+  @include media($max: $mobile) {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  flex-shrink: 0;
+
+  @include media($max: $mobile) {
+    align-items: flex-start;
+  }
+}
+
+.eventLink {
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--secondary-bright, var(--secondary));
+  }
+}
+
+.event {
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: color-mix(in srgb, var(--primary-dim2) 20%, transparent);
+  color: var(--primary-dim);
+
+  &.result_finalist {
+    background: color-mix(in srgb, #f5c518 15%, transparent);
+    color: #f5c518;
+  }
+  &.result_winner {
+    background: color-mix(in srgb, #4ade80 15%, transparent);
+    color: #4ade80;
+  }
+  &.result_submitted {
+    background: color-mix(in srgb, var(--secondary) 15%, transparent);
+    color: var(--secondary);
+  }
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: var(--primary-dim2);
+  white-space: nowrap;
+
+  @include media($max: $mobile) {
+    white-space: normal;
+  }
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--primary-dim);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--primary-dark) 70%, transparent);
+  color: var(--primary-dim2);
+  border: 1px solid color-mix(in srgb, var(--primary-dark) 60%, transparent);
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.85rem;
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--secondary);
+  color: var(--background);
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+    color: var(--background);
+  }
+}
+
+.linkGhost {
+  background: transparent;
+  color: var(--primary-dim);
+  border: 1px solid color-mix(in srgb, var(--primary-dim2) 50%, transparent);
+
+  &:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    opacity: 1;
+  }
+}

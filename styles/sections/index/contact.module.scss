@@ -1,0 +1,90 @@
+@import "../../scss/_mixins";
+
+.wrapper {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 0 1rem;
+}
+
+.pre {
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+  margin: 0 0 1rem;
+  line-height: 1.15;
+}
+
+.sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--primary-dim);
+  margin: 0 0 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--background);
+  background: var(--secondary);
+  text-decoration: none;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+    color: var(--background);
+  }
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.7rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--primary-dim2) 50%, transparent);
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: translateY(-2px);
+  }
+}

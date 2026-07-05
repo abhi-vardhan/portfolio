@@ -2,8 +2,9 @@ import Hero from "../components/sections/index/hero";
 import Looking from "../components/sections/index/looking";
 import About from "../components/sections/index/about";
 import Experience from "../components/sections/index/experience";
+import Hackathons from "../components/sections/index/hackathons";
 import Publications from "../components/sections/index/publications";
-import GetToKnowMe from "../components/sections/index/get-to-know-me";
+import Contact from "../components/sections/index/contact";
 import FeaturedProjects from "../components/sections/projects/featured";
 
 import Color from "../components/utils/page.colors.util";
@@ -18,10 +19,11 @@ export default function HomePage() {
       <Hero />
       <Looking />
       <FeaturedProjects />
-      <About />
       <Experience />
+      <Hackathons />
       <Publications />
-      <GetToKnowMe />
+      <About />
+      <Contact />
     </>
   );
 }

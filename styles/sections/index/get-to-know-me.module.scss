@@ -130,19 +130,31 @@
     span {
       font-size: 3.5rem;
       line-height: 1;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.45));
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
       transition: transform 0.3s ease;
 
-      &:nth-child(1) { transform: rotate(-12deg) translateY(4px); }
-      &:nth-child(2) { transform: rotate(4deg) translateY(-8px); }
-      &:nth-child(3) { transform: rotate(14deg) translateY(2px); }
+      &:nth-child(1) {
+        transform: rotate(-12deg) translateY(4px);
+      }
+      &:nth-child(2) {
+        transform: rotate(4deg) translateY(-8px);
+      }
+      &:nth-child(3) {
+        transform: rotate(14deg) translateY(2px);
+      }
     }
   }
 
   &:hover .emojiStack span {
-    &:nth-child(1) { transform: rotate(-8deg) translateY(-4px); }
-    &:nth-child(2) { transform: rotate(2deg) translateY(-14px); }
-    &:nth-child(3) { transform: rotate(10deg) translateY(-2px); }
+    &:nth-child(1) {
+      transform: rotate(-8deg) translateY(-4px);
+    }
+    &:nth-child(2) {
+      transform: rotate(2deg) translateY(-14px);
+    }
+    &:nth-child(3) {
+      transform: rotate(10deg) translateY(-2px);
+    }
   }
 }
 
@@ -247,9 +259,13 @@
 
     &:hover {
       transform: translateY(-3px) scale(1.08);
-      background: color-mix(in srgb, var(--neon-1-1) 18%, var(--background-dim2));
+      background: color-mix(
+        in srgb,
+        var(--neon-1-1) 18%,
+        var(--background-dim2)
+      );
       border-color: color-mix(in srgb, var(--secondary) 50%, transparent);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     }
   }
 }

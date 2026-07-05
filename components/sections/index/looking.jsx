@@ -36,9 +36,7 @@ export default function Looking() {
         <h2 className={looking.jsonSub} data-reveal data-reveal-delay="2">
           <span className={looking.highlight2}>Cloud Architect</span>,
         </h2>
-        <h2 className={looking.jsonSub} data-reveal data-reveal-delay="3">
-          <span className={looking.highlight}>Full-Stack Developer</span>
-        </h2>
+        
         <h2 className={looking.json} data-reveal data-reveal-delay="3">
           &#125;
         </h2>

@@ -6,7 +6,7 @@
 
   min-height: 100vh;
   height: auto;
-  padding: 7rem 0 4rem;
+  padding: 2rem 0 4rem; /* top handled by body padding-top */
   justify-content: center;
 
   > .container {
